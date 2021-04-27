@@ -1,6 +1,6 @@
 module Features
-    using Geometry
-    import Geometry.Points, Geometry.Cells
+    using Common
+    import Common.Points, Common.Cells
     using Search
     using DataStructures
     using Statistics
@@ -9,5 +9,5 @@ module Features
     include("Features/normals.jl")
     include("Features/subsample.jl")
 
-    export Statistics
+    export Statistics, Common
 end # module

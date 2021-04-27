@@ -7,7 +7,7 @@ function subsample_poisson_disk(points::Points, min_dist=0.05::Float64; step=1.0
 			if haskey(voxs,s+i)
 				p_neigh = voxs[s+i]
 				for pt in p_neigh
-					dist = Geometry.norm(point-pt)
+					dist = Common.norm(point-pt)
 					test = test && dist>min_dist
 					if !test
 						break

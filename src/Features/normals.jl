@@ -9,7 +9,7 @@ function compute_normals(points::Points, threshold::Float64, k::Int64)
 		N = Search.neighborhood(kdtree,points,[i],Int[],threshold,k)
 
 		try
-			normal,_ = Geometry.LinearFit(points[:,N])
+			normal,_ = Common.LinearFit(points[:,N])
 			normals[:,i] = normal
 		catch y
 
@@ -34,14 +34,14 @@ function compute_curvatures(INPUT_PC::PointCloud, par::Float64, threshold::Float
 	Threads.@threads for i in 1:npoints
 		# TODO verificare che i vicini ci siano e che il valore della curvatura non sia NaN
 		N = Search.inrange(balltree, points[:,i], par, true) # usare un parametro abbastanza grande
-		centroid = Geometry.centroid(points[:,N])
+		centroid = Common.centroid(points[:,N])
 		C = zeros(2,2)
 		for j in N
 			diff = points[:,j] - centroid
 			C += diff*diff'
 		end
 
-		eigval = Geometry.eigvals(C)
+		eigval = Common.eigvals(C)
 		curvature = eigval[1]/sum(eigval)
 		curvs[i] = curvature
 	end
