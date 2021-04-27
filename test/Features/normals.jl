@@ -8,7 +8,7 @@
 				0.117992  0.660728   0.923514   0.88808   0.0907547  0.0498302  0.0566162  0.189819  0.135681  0.888466;
 				0.0 	  0.0 		 0.0     	0.0		  0.0 	     0.0        0.0	       0.0 		 0.0	   0.0]
 		normals = Features.compute_normals(V, Inf, k)
-		@test Geometry.approxVal(4).(normals) == hcat(fill(normal, 10)...)
+		@test Common.approxVal(4).(normals) == hcat(fill(normal, 10)...)
 	end
 
 	@testset "arbitrary plane" begin
@@ -19,7 +19,7 @@
  			0.117992  0.660728   0.923514   0.88808   0.0907547  0.0498302  0.0566162  0.189819  0.135681  0.888466;
  			2.77447   6.08495   10.7003    10.3382    3.05855    0.828941   2.61095    1.9655    2.75854   9.8322]
 		normals = Features.compute_normals(V, Inf, k)
-		@test Geometry.approxVal(4).(normals) == hcat(fill(normal, 10)...)
+		@test Common.approxVal(4).(normals) == hcat(fill(normal, 10)...)
 	end
 
 end
