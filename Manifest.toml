@@ -373,7 +373,7 @@ uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 
 [[Search]]
 deps = ["Common", "LightGraphs", "NearestNeighbors"]
-git-tree-sha1 = "7f2f87f583fe4d392b16c7f664e7d9263ba4515d"
+git-tree-sha1 = "0653a596aec75c26d6dd3e584b0f4de4892a2a19"
 repo-rev = "master"
 repo-url = "https://github.com/marteresagh/Search.jl"
 uuid = "747819b4-c676-4122-9f3c-fea06ae3fbba"
