@@ -59,7 +59,7 @@ version = "0.7.0"
 
 [[Common]]
 deps = ["Delaunay", "LinearAlgebra", "QHull", "SparseArrays"]
-git-tree-sha1 = "96d878592e8aa8fa8dade790e3e81f12443d7fa8"
+git-tree-sha1 = "a85e8c2b4132deea5abe58a5ac2a0dac6568b509"
 repo-rev = "master"
 repo-url = "https://github.com/marteresagh/Common.jl"
 uuid = "1e120bc2-2bd2-483a-9663-793997b3971f"
@@ -373,7 +373,7 @@ uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 
 [[Search]]
 deps = ["Common", "LightGraphs", "NearestNeighbors"]
-git-tree-sha1 = "2fb58db29728d393ae9ba77b4526f3940b328327"
+git-tree-sha1 = "fa32e1b900c001fa6a0a6ebad7ea63d944c790bc"
 repo-rev = "master"
 repo-url = "https://github.com/marteresagh/Search.jl"
 uuid = "747819b4-c676-4122-9f3c-fea06ae3fbba"
